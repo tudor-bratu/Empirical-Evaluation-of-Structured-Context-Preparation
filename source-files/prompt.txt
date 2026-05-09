@@ -1,0 +1,32 @@
+Generate exactly 30 JUnit 5 test methods for the Spring AI ChatMemory subsystem.
+
+Target: the ChatMemory interface, MessageWindowChatMemory implementation,
+and the ChatMemoryRepository abstraction with its InMemoryChatMemoryRepository
+implementation. Include tests that exercise the message-window behavior,
+conversation isolation, message ordering, and repository contract compliance.
+
+Requirements:
+- JUnit 5 (org.junit.jupiter.api)
+- Output ONE compilable Java file
+- Save to: spring-ai-model/src/test/java/org/springframework/ai/chat/memory/GeneratedChatMemoryTest.java
+- Package: org.springframework.ai.chat.memory
+- Use existing project conventions (AssertJ, Mockito where it helps)
+- Distribute the 30 tests across the listed components
+- Cover happy paths, edge cases (empty conversations, conversation ID
+  collisions, message-window overflow, null inputs)
+
+You may:
+- Read source files (.java) in the chat/memory package and elsewhere
+- Compile your generated test file and iterate on compilation errors
+- Run your generated tests and fix failures that result from your own
+  test code being wrong (incorrect assertions, missing imports, etc.)
+
+You may NOT:
+- Read any existing *Test.java files anywhere in the repository
+- Read git history or git log for any test file
+- Look at any file in target/ or build/ directories
+- Search for "Test" or "test" patterns to find existing tests
+
+The constraint is to prevent contamination: do not look at how existing
+tests for this subsystem are written. Generate tests purely from your
+understanding of the source code.
